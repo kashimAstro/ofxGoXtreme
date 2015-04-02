@@ -4,6 +4,7 @@
 
 class FTP {
 	public:
+
 	Poco::Net::FTPClientSession* ftpClient;
 	string user, host, pass;
 	int port;
