@@ -21,7 +21,7 @@ class RTSPinterfaces {
             return buffer;
         }
 
-        string getCameraMediaPath( int width=320, int height=240, int quality=80, int bitrate=8000000/*0x2dc6c0*/ ) {
+        string getCameraMediaPath( int width=320, int height=240, int quality=80, int bitrate=0x2dc6c0 ) {
                 string buffer;
                 buffer = "rtsp://"+getHost()+"/MJPG?W=";
                 buffer += ofToString(width);
