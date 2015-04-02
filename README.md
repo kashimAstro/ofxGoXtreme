@@ -16,9 +16,9 @@ FTP (File Transfer Protocol)
 
 <b>I am currently finishing the reverse of the PTP</b>
 
-![alt tag](https://github.com/kashimAstro/ofxGoXtreme/snap/blob/master/1.jpg)
-![alt tag](https://github.com/kashimAstro/ofxGoXtreme/snap/blob/master/2.jpg)
-![alt tag](https://github.com/kashimAstro/ofxGoXtreme/snap/blob/master/3.jpg)
+![alt tag](https://github.com/kashimAstro/ofxGoXtreme/blob/master/snap/1.jpg)
+![alt tag](https://github.com/kashimAstro/ofxGoXtreme/blob/master/snap/2.jpg)
+![alt tag](https://github.com/kashimAstro/ofxGoXtreme/blob/master/snap/3.jpg)
 
 <br>
 
