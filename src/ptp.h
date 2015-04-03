@@ -24,14 +24,24 @@ class PTPinterfaces{
 		FORMATVIDEO = "MOV";
 		FORMATPHOTO = "JPG";
 
-        ofAddListener(ptp.commandComplete, this, &PTPinterfaces::complete);
+	        ofAddListener(ptp.commandComplete, this, &PTPinterfaces::complete);
 	}
+
 
 	void listFile() {
 		stringstream cmd;
 		cmd << BINARY <<" --port ptpip:" << IPptp << " --camera \"PTP/IP Camera\" -L";
 		#ifdef DEBUG
 		ofLog()<<"command-list-file:"<<cmd.str()<<endl;
+		#endif
+                ptp.callCommand( cmd.str() );
+	}
+
+	void downalodRawData(){
+		stringstream cmd;
+		cmd << BINARY <<" --port ptpip:" << IPptp << " --get-all-raw-data";
+		#ifdef DEBUG
+		ofLog()<<"command-downalod-all-raw-data:"<<cmd.str()<<endl;
 		#endif
                 ptp.callCommand( cmd.str() );
 	}

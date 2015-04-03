@@ -19,6 +19,7 @@ FTP (File Transfer Protocol)
 ![alt tag](https://github.com/kashimAstro/ofxGoXtreme/blob/master/snap/1.jpg)
 ![alt tag](https://github.com/kashimAstro/ofxGoXtreme/blob/master/snap/2.jpg)
 ![alt tag](https://github.com/kashimAstro/ofxGoXtreme/blob/master/snap/3.jpg)
+![alt tag](https://github.com/kashimAstro/ofxGoXtreme/blob/master/snap/4.jpg)
 
 <br>
 
@@ -59,3 +60,6 @@ FTP (File Transfer Protocol)
 <li>6 x 3,8 x 2,3 cm (LxAxP)</li>
 <li>Weight: 66 g</li>
 </ul>
+
+FAQ accessories video camera:
+http://www.goxtreme-action-cams.com/action-cam-support/
