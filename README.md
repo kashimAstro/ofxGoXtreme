@@ -14,6 +14,9 @@ RTSP (Real Time Streaming Protocol)
 PTP (Picture Transfer Protocol)
 FTP (File Transfer Protocol)
 
+<b>Solved latency rtsp streaming</b>
+(special thanks Arturo Castro)
+
 <b>I am currently finishing the reverse of the PTP</b>
 
 ![alt tag](https://github.com/kashimAstro/ofxGoXtreme/blob/master/snap/1.jpg)

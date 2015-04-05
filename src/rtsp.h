@@ -5,6 +5,8 @@ class RTSPinterfaces {
         string host;
         string user;
         string pass;
+	ofGstVideoUtils gst;
+        ofTexture tex;
 
         RTSPinterfaces() {
             host="192.168.1.1";
@@ -33,6 +35,23 @@ class RTSPinterfaces {
                 buffer += ofToString(bitrate);
                 return buffer;
         }
+
+	void setup( int width=640, int height=360, int quality=100, int bitrate=0x2dc6c0 ) {
+		string path = getCameraMediaPath(width,height,quality,bitrate);
+        	gst.setPipeline("rtspsrc location=" + path + " latency=0 ! rtpjpegdepay ! decodebin ! videoconvert", OF_PIXELS_RGB, true, width, height);
+	        gst.startPipeline();
+	}
+
+	void update() {
+		gst.update();
+	        if(gst.isFrameNew()) {
+	            tex.loadData(gst.getPixels());
+	        }
+	}
+
+	void draw(int x=0, int y=0, int w=640, int h=360) {
+	        tex.draw(x,y,w,h);
+	}
 
         string getHost(){
             return host;

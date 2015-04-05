@@ -5,11 +5,11 @@
 int main(){
         #ifdef OF_9
         ofGLWindowSettings settings;
-        settings.width=640;
+        settings.width=1280;
         settings.height=360;
         ofCreateWindow(settings);
         #else
-        ofSetupOpenGL(630,360, OF_FULLSCREEN);
+        ofSetupOpenGL(1280,360, OF_FULLSCREEN);
         #endif
         ofRunApp(new ofApp());
 }

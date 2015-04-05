@@ -1,11 +1,6 @@
 #include "ofMain.h"
 #include "ofApp.h"
 
-ofEasyCam cam;
-FTPinterfaces ftp;
-int w,h;
-string imgTmp;
-
 void ofApp::setup(){
 	ofSetFrameRate(25);
 

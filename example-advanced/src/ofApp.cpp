@@ -5,22 +5,18 @@ void ofApp::setup(){
 	w=ofGetScreenWidth();
 	h=ofGetScreenHeight();
 
-	string path = rtsp.getCameraMediaPath(640, 360, 100, 3000000);
-	p.loadMovie(path);
-	p.play();
-
+	rtsp.setup();
 	ptp.init();
 }
 
 void ofApp::update(){
 	ofSetWindowTitle(ofToString(ofGetFrameRate()));
-	p.update();
+	rtsp.update();
 }
 
 void ofApp::draw(){
 	ofBackgroundGradient(255,0);
-	p.draw(0,0);
-	ofDrawBitmapStringHighlight("press: r - reset rtsp",       ofPoint(10,20,0));
+	rtsp.draw(0,0);
         ofDrawBitmapStringHighlight("press: l - select file ftp",  ofPoint(10,50,0));
         ofDrawBitmapStringHighlight("press: d - download file ftp",ofPoint(10,80,0));
         ofDrawBitmapStringHighlight("press: 1 - list file ptp",    ofPoint(10,110,0));
@@ -28,13 +24,6 @@ void ofApp::draw(){
 }
 
 void ofApp::keyPressed(int key){
-	/* refresh rtsp */
-	if(key == 'r') {
-		p.close();
-		string path = rtsp.getCameraMediaPath(640, 360, 100, 6000000);
-		p.loadMovie(path);
-		p.play();
-	}
 	/* ftp sample */
 	if(key == 'l'){
 		vector<string> s = ftp.list(4);

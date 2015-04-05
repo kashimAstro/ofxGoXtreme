@@ -1,29 +1,27 @@
 #include "ofMain.h"
 #include "ofApp.h"
 
-ofVideoPlayer p;
-RTSPinterfaces rtsp;
-int w,h;
-
 void ofApp::setup(){
 	ofSetFrameRate(25);
 
 	w=ofGetScreenWidth();
 	h=ofGetScreenHeight();
-
-	string path = rtsp.getCameraMediaPath();
-	p.loadMovie(path);
-	p.play();
+	rtsp.setup();
+	p.load(rtsp.getCameraMediaPath());
 }
 
 void ofApp::update(){
 	ofSetWindowTitle(ofToString(ofGetFrameRate()));
+	rtsp.update();
 	p.update();
 }
 
 void ofApp::draw(){
 	ofBackgroundGradient(255,0);
-	p.draw(0,0);
+	rtsp.draw();
+	p.draw(rtsp.tex.getWidth(),0);
+        ofDrawBitmapStringHighlight("not latency ofGstVideoUtils", ofPoint(10,20,0));
+        ofDrawBitmapStringHighlight("latency ofVideoPlayer",       ofPoint(rtsp.tex.getWidth()+20,20,0));
 }
 
 void ofApp::keyPressed(int key){

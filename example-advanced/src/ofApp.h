@@ -4,7 +4,6 @@
 class ofApp : public ofBaseApp {
 	public:
 		ofEasyCam cam;
-		ofVideoPlayer p;
 		RTSPinterfaces rtsp;
 		PTPinterfaces ptp;
 		FTPinterfaces ftp; 

@@ -1,9 +1,6 @@
 #include "ofMain.h"
 #include "ofApp.h"
 
-PTPinterfaces ptp;
-int w,h;
-
 void ofApp::setup(){
 	ofSetFrameRate(25);
 
